@@ -1,0 +1,31 @@
+{
+  "name": "bikelec/module-google-sheets",
+  "version": "1.0.0",
+  "description": "N/A",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "google/apiclient": "^2.12.1"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Bikelec\\GoogleSheets\\": ""
+    }
+  },
+  "scripts": {
+    "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+  },
+  "extra": {
+    "google/apiclient-services": [
+      "Drive",
+      "Sheets"
+    ]
+  }
+}
+
