@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="google_sheets" translate="label" sortOrder="100">
+            <label>Bikelec Google Sheets</label>
+        </tab>
+        <section id="google_sheets" translate="label" sortOrder="135" showInDefault="1" showInWebsite="0" showInStore="0">
+            <class>separator-top</class>
+            <label>Google Sheets Configuration</label>
+            <tab>google_sheets</tab>
+            <resource>Bikelec_GoogleSheets::config_api</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="account" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Account</label>
+                </field>
+                <field id="credentials" translate="label" type="textarea" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Credentials</label>
+                </field>
+                <field id="test" translate="label" type="multiselect" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Models</label>
+                    <source_model>Bikelec\GoogleSheets\Model\System\Config\Models</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
